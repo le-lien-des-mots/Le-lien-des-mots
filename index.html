@@ -72,12 +72,13 @@ section{
 }
 
 h2 {
+  display: block;          /* 🔥 C’EST ÇA QUI MANQUAIT */
   position: relative;
-  max-width: 900px;      /* même largeur que .box */
-  margin: 0 auto 24px;   /* centré */
+  max-width: 900px;        /* même largeur que .box */
+  margin: 0 auto 24px;     /* centré */
   color: var(--sage);
   padding-bottom: 12px;
-  text-align:center;
+  text-align: center;
 }
 
 h2::after {
