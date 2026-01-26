@@ -42,18 +42,21 @@ header{
 header h1{
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
-  letter-spacing: 1,5px;
-  position:relative;
-  display:inline-block;
-  margin:0 0 10px;
-  padding:34px 32px;
-  border-radius:14px;
-  overflow:hidden;
+  letter-spacing: 1.5px;
+
+  position: relative;
+  display: inline-block;
+
+  margin: 0 0 10px;
+  padding: 34px 40px;
+
+  border-radius: 14px;
   background: var(--sage);
-  text-shadow:
-  0 1px 0 rgba(255,255,255,0.3),
-  0 3px 6px rgba(0,0,0,0.18);
-  header h1::before,
+
+  /* ✨ ombre élégante */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+    header h1::before,
 header h1::after{
   content:"";
   position:absolute;
