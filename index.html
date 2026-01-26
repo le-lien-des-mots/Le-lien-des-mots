@@ -86,8 +86,14 @@ h2{
 h2::after{
   content: "";
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0;
+  transform: translateX(-50%);
+  width: 350px;      /* ✅ longueur fixe */
+  height: 3px;
+  background: var(--sage);
+  border-radius: 2px;
+}
 
   /* ✅ toute la largeur du "cadre" (comme .box) */
   width: 100%;
