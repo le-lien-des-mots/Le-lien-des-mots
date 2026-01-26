@@ -57,24 +57,31 @@ header h1{
   /* ✨ ombre élégante */
   text-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
-    header h1::before,
+    /* Coins dorés du titre */
+header h1::before,
 header h1::after{
-  width:12px;          /* avant 16px */
-  height:12px;
-  border:1.2px solid rgba(212,175,55,0.45); /* plus discret */
+  content:"";
+  position:absolute;
+  width:14px;
+  height:14px;
+  border:1.6px solid rgba(212,175,55,.75);
+  pointer-events:none;
 }
 
 /* coin haut gauche */
 header h1::before{
-  top:10px;            /* avant 14px */
+  top:10px;
   left:10px;
+  border-right:none;
+  border-bottom:none;
 }
 
 /* coin bas droit */
 header h1::after{
   bottom:10px;
   right:10px;
-
+  border-left:none;
+  border-top:none;
 }
 header h1 > *{ position:relative; z-index:1; }
 header h1{ z-index:1; }
