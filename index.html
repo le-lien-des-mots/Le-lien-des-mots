@@ -71,34 +71,40 @@ section{
   padding:40px 20px;
 }
 
-h2 {
+/* Titres H2 + trait de la même largeur que les pavés blancs */
+h2{
   position: relative;
-  max-width: 900px;     /* EXACTEMENT comme .box */
-  width: 100%;
-  margin: 0 auto 32px;  /* centré + espace dessous */
   color: var(--sage);
-  padding-bottom: 12px;
   text-align: center;
+  padding-bottom: 12px;
+
+  /* même largeur que .box */
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto 24px;
 }
 
-h2::after {
+h2::after{
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;           /* 🔥 toute la largeur du carré blanc */
+
+  /* ✅ toute la largeur du "cadre" (comme .box) */
+  width: 100%;
   height: 3px;
   background-color: var(--sage);
   border-radius: 2px;
 }
 
-/* Pavés blancs */
+/* Pavés blancs centrés + même largeur que h2 */
 .box{
-  background:#fff;
-  max-width: 900px;      /* même largeur que .box */
-  margin: 0 auto 24px;   /* centré */
-  padding:24px;
-  border-left:5px solid var(--ink);
+  background: #ffffff;
+  padding: 24px;
+
+  width: min(900px, calc(100% - 32px));
+  margin: 16px auto 24px;
+
+  border-left: 5px solid var(--ink);
   box-shadow: 0 10px 26px rgba(44,44,44,.08);
   border-radius: 12px;
 }
