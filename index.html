@@ -35,17 +35,8 @@
 header{
   background: var(--sage);
   color:#fff;
-  padding:60px 20px;
+  padding: 80px 20px 60px; /* + d’air en haut (tu peux ajuster) */
   text-align:center;
-  <div class="nav-select">
-  <select id="jumpMenu" aria-label="Aller à une section">
-    <option value="">Aller à…</option>
-    <option value="#concept">Concept</option>
-    <option value="#a-qui">À qui s’adresse ce service ?</option>
-    <option value="#tarifs">Tarifs</option>
-    <option value="#contact">Contact</option>
-  </select>
-</div>
 }
 /* Rectangle du titre + grain papier */
 header h1{
@@ -251,6 +242,7 @@ section {
   </style>
   
 </head>
+<body>
 <script>
   const jump = document.getElementById("jumpMenu");
   if (jump) {
@@ -264,13 +256,26 @@ section {
     });
   }
 </script>
-<body>
-
 <header>
   <h1>Le Lien des Mots</h1>
   <p>Créer du lien, un mot après l’autre.</p>
+  <header>
+  <h1>Le Lien des Mots</h1>
+  <p>Créer du lien, un mot après l’autre.</p>
+
+  <div class="nav-select">
+    <select id="jumpMenu" aria-label="Aller à une section">
+      <option value="">Aller à…</option>
+      <option value="#concept">Concept</option>
+      <option value="#a-qui">À qui s’adresse ce service ?</option>
+      <option value="#tarifs">Tarifs</option>
+      <option value="#modalites">Modalités</option>
+      <option value="#contact">Contact</option>
+    </select>
+  </div>
+  </header>
 </header>
-<section id="Concept">
+<section id="concept">
   <h2><strong>Concept</strong></h2>
   <div class="box">
     <p>
@@ -283,7 +288,7 @@ section {
     </p>
   </div>
 </section>
-<section id="Pour-qui?">
+<section id="pour-qui">
   <h2><strong>À qui s’adresse ce service?</strong></h2>
   <div class="box">
     <ul>
@@ -293,7 +298,7 @@ section {
     </ul>
   </div>
 </section>
-  <section id="Tarifs">
+  <section id="tarifs">
   <h2><strong>Offre & tarif</strong></h2>
 
   <div class="box">
@@ -317,7 +322,7 @@ section {
     </ul>
   </div>
   </section>
-<section id="Modalites" class="modalites">
+<section id="modalites" class="modalites">
   <h2><strong>Modalités d’inscription et de règlement</strong></h2>
 
   <div class="box">
@@ -338,7 +343,7 @@ section {
     </div>
   </div>
 </section>
-<section id="Contact">
+<section id="contact">
   <h2><strong>Contact</strong></h2>
 
   <div class="box">
