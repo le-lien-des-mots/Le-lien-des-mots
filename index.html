@@ -37,6 +37,15 @@ header{
   color:#fff;
   padding:60px 20px;
   text-align:center;
+  <div class="nav-select">
+  <select id="jumpMenu" aria-label="Aller à une section">
+    <option value="">Aller à…</option>
+    <option value="#concept">Concept</option>
+    <option value="#a-qui">À qui s’adresse ce service ?</option>
+    <option value="#tarifs">Tarifs</option>
+    <option value="#contact">Contact</option>
+  </select>
+</div>
 }
 /* Rectangle du titre + grain papier */
 header h1{
@@ -210,17 +219,58 @@ footer a{ color:#fff; text-decoration:underline; }
   }
   h2::after { width:350px; }
   }
+  .nav-select{
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-select select{
+  width: min(420px, calc(100% - 40px));
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  backdrop-filter: blur(6px);
+}
+
+.nav-select select option{
+  color: #2c2c2c; /* options lisibles dans le menu */
+}
+  html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 30px; /* ajuste si besoin : 20 / 40 / 60px */
+}
   </style>
   
 </head>
-
+<script>
+  const jump = document.getElementById("jumpMenu");
+  if (jump) {
+    jump.addEventListener("change", () => {
+      const target = jump.value;
+      if (!target) return;
+      const el = document.querySelector(target);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      // optionnel : remettre le menu sur "Aller à..."
+      jump.value = "";
+    });
+  }
+</script>
 <body>
 
 <header>
   <h1>Le Lien des Mots</h1>
   <p>Créer du lien, un mot après l’autre.</p>
 </header>
-<section>
+<section id="Concept">
   <h2><strong>Concept</strong></h2>
   <div class="box">
     <p>
@@ -233,7 +283,7 @@ footer a{ color:#fff; text-decoration:underline; }
     </p>
   </div>
 </section>
-<section>
+<section id="Pour-qui?">
   <h2><strong>À qui s’adresse ce service?</strong></h2>
   <div class="box">
     <ul>
@@ -243,7 +293,7 @@ footer a{ color:#fff; text-decoration:underline; }
     </ul>
   </div>
 </section>
-  <section id="tarifs">
+  <section id="Tarifs">
   <h2><strong>Offre & tarif</strong></h2>
 
   <div class="box">
@@ -267,7 +317,7 @@ footer a{ color:#fff; text-decoration:underline; }
     </ul>
   </div>
   </section>
-<section id="modalites" class="modalites">
+<section id="Modalites" class="modalites">
   <h2><strong>Modalités d’inscription et de règlement</strong></h2>
 
   <div class="box">
@@ -288,7 +338,7 @@ footer a{ color:#fff; text-decoration:underline; }
     </div>
   </div>
 </section>
-<section id="contact">
+<section id="Contact">
   <h2><strong>Contact</strong></h2>
 
   <div class="box">
