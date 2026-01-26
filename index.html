@@ -116,6 +116,7 @@ h2::after{
 
 /* Pavés blancs centrés + même largeur que h2 */
 .box{
+  position: relative; /* indispensable */
   background: #ffffff;
   max-width: 900px;
   margin: 16px auto 32px;
@@ -130,10 +131,11 @@ h2::after{
 .box::before{
   content: "";
   position: absolute;
-  top: 16px;
-  bottom: 16px;
 
-  left: 6px; /* juste à droite du trait noir */
+  top: 18px;
+  bottom: 18px;
+
+  left: 6px; /* pile à droite du trait noir */
   width: 1.5px;
 
   background: linear-gradient(
@@ -144,6 +146,7 @@ h2::after{
   );
 
   border-radius: 2px;
+  pointer-events: none;
 }
 
 ul{ padding-left:20px; }
