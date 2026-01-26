@@ -6,19 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Le Lien des Mots propose une correspondance manuscrite bienveillante pour créer du lien avec les personnes âgées.">
   <style>
-    body {
-  margin: 0;
-  fobody {
+  body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   color: #2c2c2c;
   line-height: 1.7;
 
-  /* Fond crème + motif feuilles */
-  background-color: #fbfaf6;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Cg fill='none' stroke='%236f8f7b' stroke-width='2' opacity='0.18'%3E%3Cpath d='M70 90c22 0 36 14 36 36s-14 36-36 36c0-22-14-36-36-36s14-36 36-36z'/%3E%3Cpath d='M190 60c18 8 26 28 18 46s-28 26-46 18c8-18 28-26 46-18z'/%3E%3Cpath d='M210 200c-22 0-36-14-36-36s14-36 36-36c0 22 14 36 36 36s-14 36-36 36z'/%3E%3Cpath d='M90 210c12-18 34-22 52-10s22 34 10 52c-18-12-22-34-10-52z'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 300px 300px;
+  /* Fond crème + motif feuilles discret */
+  background-color: #fbfaf7;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%236f8f7b' stroke-width='2' opacity='0.10'%3E%3Cpath d='M55 70c18 0 30 12 30 30S73 130 55 130c0-18-12-30-30-30s12-30 30-30z'/%3E%3Cpath d='M165 40c16 6 22 22 16 38s-22 22-38 16c6-16 22-22 38-16z'/%3E%3Cpath d='M165 170c-18 0-30-12-30-30s12-30 30-30c0 18 12 30 30 30s-12 30-30 30z'/%3E%3Cpath d='M70 175c10-14 26-18 40-8s18 26 8 40c-14-10-18-26-8-40z'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(circle at 20% 10%, rgba(111, 143, 123, 0.10), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(111, 143, 123, 0.08), transparent 50%);
+
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 240px 240px, 900px 900px, 900px 900px;
+  background-position: top left, top left, top right;
   }
   header {
   background: #6f8f7b; /* vert sauge doux */
