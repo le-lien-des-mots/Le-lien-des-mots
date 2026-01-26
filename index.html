@@ -71,22 +71,24 @@ section{
   padding:40px 20px;
 }
 
-h2{
-  position:relative;
-  color:var(--sage);
-  padding-bottom:10px;
-  margin-bottom:24px;
+h2 {
+  position: relative;
+  max-width: 900px;      /* même largeur que .box */
+  margin: 0 auto 24px;   /* centré */
+  color: var(--sage);
+  padding-bottom: 12px;
   text-align:center;
 }
-h2::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:380px;
-  height:3px;
-  background:var(--sage);
-  border-radius:2px;
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;           /* 🔥 toute la largeur du carré blanc */
+  height: 3px;
+  background-color: var(--sage);
+  border-radius: 2px;
 }
 
 /* Pavés blancs */
