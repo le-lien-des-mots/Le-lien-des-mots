@@ -40,6 +40,10 @@
   max-width: 350px;
   width: 100%;
   height: auto;
+  
+  .logo-header img {
+  display: block;
+  margin: 0 auto 6px auto; /* ⬅ espace SOUS le logo */
 }
 
 header{
@@ -95,12 +99,12 @@ header h1::after{
 }
 header h1 > *{ position:relative; z-index:1; }
 header h1{ z-index:1; }
-header p{
-  margin-top: 2px;
-  margin-bottom: 18px;
-  font-size:1.2em;
-  font-style:italic;
-  opacity:.9;
+header p {
+  margin-top: 4px;      /* ⬅ proche du logo */
+  margin-bottom: 22px;  /* ⬅ plus d’air avant le menu */
+  font-size: 1.2em;
+  font-style: italic;
+  opacity: .9;
 }
 
 section{
