@@ -328,20 +328,24 @@ section {
   font-size: 13px;
   opacity: 0.8;
     }
-    /* LOGO */
+   /* LOGO */
 .logo-header{
-  margin: 0;              /* enlève l'espace inutile */
+  margin: 0;
 }
 
 .logo-header img{
   display: block;
-  margin: 0 auto;         /* centré */
+  margin: 0 auto 4px auto;   /* ↓ espace sous le logo (diminue à 0-2px si tu veux encore plus collé) */
+  max-width: 420px;          /* ↑ logo plus gros (mets 380 / 450 selon ton goût) */
+  width: min(90vw, 420px);
+  height: auto;
 }
 
 /* PHRASE */
 header .baseline{
-  margin-top: 8px;        /* proche du logo */
-  margin-bottom: 22px;    /* plus d'air avant le menu */
+  margin: 0;                 /* enlève les marges par défaut */
+  margin-top: 4px;           /* ↓ rapproche la phrase du logo */
+  margin-bottom: 34px;       /* ↑ plus d’air avant le menu */
   font-size: 1.2em;
   font-style: italic;
   opacity: 0.9;
@@ -349,7 +353,7 @@ header .baseline{
 
 /* MENU */
 .nav-select{
-  margin-top: 0;
+  margin-top: 0;             /* laisse la marge venir de .baseline */
 }
   </style>
   
